@@ -34,8 +34,6 @@ html{
 .black-back2{background-color: var(--Black2);}
 
 #cv-iframe{
-  display: block;
-  z-index: 90;
   height: 100vh;
   width: 100vw;
   object-fit: contain;
@@ -395,20 +393,6 @@ html{
   background-color: yellow;
 }
 
-@keyframes blink {
-  0%{
-    transform: scaleY(100%);
-  }
-  
-  50%{
-    transform: scaleY(0%);
-  }
-
-  100%{
-    transform: scaleY(100%);
-  }
-}
-
 .section-title{
   font-family: var(--CascadiaCode);
   font-size: 13vh;
@@ -590,7 +574,6 @@ html{
 }
 
 .group-input{
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -598,21 +581,56 @@ html{
   font-size: 1.5rem;
   font-weight: 600;
   font-family: var(--CascadiaCode);
+  display: block;
 }
 
 .input-text{
-  padding: 5px;
+  padding: 0;
   font-family: var(--CascadiaCode);
   font-weight: 600;
-  box-shadow: none;
-  border: none !important;
-  box-shadow: none !important;
+  border: none;
   background: var(--Black2);
+  font-size: 1.5rem;
+  height: 100%;
+  caret-color: transparent;
+  display: flex;
+  align-items: center;
+  color: #9ac7a7;
+  cursor: text;
+}
+
+.input-text::after{
+  content: "";
+  display: inline-block;
+  height: 1.5rem;
+  width: 3px;
+  margin-left: 4px;
+  background-color: yellow;
+  display: none;
+  animation: blink 1s ease-in-out infinite;
+}
+
+.input-text:focus::after{
+  display: inline-block;
+}
+
+
+@keyframes blink {
+  0%{
+    transform: scaleY(100%);
+  }
+  
+  50%{
+    transform: scaleY(0%);
+  }
+
+  100%{
+    transform: scaleY(100%);
+  }
 }
 
 .input-text:focus{
-  border: none !important;
-  box-shadow: none !important;
+  outline: none;
 }
 
 @media (max-width: 1024px) {
@@ -734,10 +752,11 @@ html{
 }
 
 @media print {
-  div, section, img, p, h1, h2, h3, h4, h5, h6, a, i, span{
+  *{
     display: none !important;
   }
-  #cv-iframe{
-    display: block !important;
+
+  body, html, #cv-iframe{
+    display: flex !important;
   }
 }
