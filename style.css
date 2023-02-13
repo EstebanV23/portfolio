@@ -33,6 +33,15 @@ html{
 .black-back{background-color: var(--Black1);} 
 .black-back2{background-color: var(--Black2);}
 
+#cv-iframe{
+  display: block;
+  z-index: 90;
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain;
+  display: none;
+}
+
 .screen-body{
   height: 100vh;
   display: grid;
@@ -725,7 +734,10 @@ html{
 }
 
 @media print {
-  body{
-    content: url("./Hoja\ de\ vida\ Esteban\ Villamizar.pdf");
+  div, section, img, p, h1, h2, h3, h4, h5, h6, a, i, span{
+    display: none !important;
+  }
+  #cv-iframe{
+    display: block !important;
   }
 }
