@@ -20,9 +20,9 @@ window.addEventListener('scroll', () => {
   background.style.top = `${value}px`
   left.style.top = `${value}px`
   right.style.top = `${value}px`
-  const valueTexts = 90 - value * 2
-  valueTexts > 0
-    ? texts.style.transform = `translate(${valueTexts}%, ${value * 1.3}px)`
+  const valueTexts = 90
+  value > valueTexts
+    ? texts.style.transform = `translate(${value}%, ${value * 1.3}px)`
     : texts.style.transform = `translate(0%, ${value}px)`
 
   if (value >= textSection.offsetTop - 70 && !exeTyping) {
