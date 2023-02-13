@@ -110,7 +110,7 @@ html{
 }
 
 .presentation-links{
-  z-index: 6;
+  z-index: 12;
   display: flex;
   text-align: center;
   align-items: center;
@@ -413,7 +413,7 @@ html{
 
 .button-nav-responsive{
   position: fixed;
-  top: 50%;
+  top: 42%;
   left: 10px;
   z-index: 13;
   color: rgba(255, 255, 0, 0.151);
@@ -496,7 +496,6 @@ html{
 .grid-content-image{
   width: 100%;
   position: relative;
-  cursor: pointer;
 }
 
 .grid-content-image img{
@@ -530,14 +529,23 @@ html{
   }
 }
 
-.content-image-text{
+.links-git{
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.content-image-text{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 100%;
   border-radius: 0.9rem;
   background-color: rgba(0, 255, 221, 0.61);
@@ -547,8 +555,13 @@ html{
   font-weight: bold;
   font-size: 2.5rem;
   opacity: 0;
+  padding: 20px;
   transform: all 0.3s ease-in-out;
   animation: hiddenText forwards ease-in-out 0.3s;
+}
+
+.content-image-text:first-child{
+  background-color: rgba(255, 255, 0, 0.726);
 }
 
 .grid-content-image:hover .content-image-text{
