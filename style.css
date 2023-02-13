@@ -40,7 +40,8 @@ html{
   "presentation presentation"
   "navigation content"
   ;
-  grid-template-columns: 450px
+  grid-template-columns: 450px;
+  overflow-x: hidden;
 }
 
 .screen-body::-webkit-scrollbar{
@@ -579,6 +580,32 @@ html{
   }
 }
 
+.group-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--color4);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--CascadiaCode);
+}
+
+.input-text{
+  padding: 5px;
+  font-family: var(--CascadiaCode);
+  font-weight: 600;
+  box-shadow: none;
+  border: none !important;
+  box-shadow: none !important;
+  background: var(--Black2);
+}
+
+.input-text:focus{
+  border: none !important;
+  box-shadow: none !important;
+}
+
 @media (max-width: 1024px) {
   .texts-social{
     top: 19%;
@@ -694,5 +721,11 @@ html{
   
   .section-text::after{
     height: 2rem;
+  }
+}
+
+@media print {
+  body{
+    content: url("./Hoja\ de\ vida\ Esteban\ Villamizar.pdf");
   }
 }
