@@ -2,12 +2,173 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./img/Logo Esteban Villamizar.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <script src="https://kit.fontawesome.com/f4ebeebd17.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Esteban Villamizar</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="screen-body black-back">
+    <header class="screen-presentation" id="home">
+      <div class="presentation-links">
+        <input type="checkbox" id="modal-open">
+        <img src="./img/parallax/mina-oro.svg" class="parallax-image" id="mineGold" alt="">
+        <img src="./img/Logo Esteban Villamizar.svg" alt="#home" class="link-logo">
+        <div class="links-group">
+          <a class="presentation-link" href="#home">Home</a>
+          <a class="presentation-link" href="#aboutMe">About Me</a>
+          <a class="presentation-link" href="#skills">Skills</a>
+          <a class="presentation-link" href="#projects">Projects</a>
+          <a class="presentation-link" href="#contact">Contact</a>
+        </div>
+        <label for="modal-open" class="container-hamburguer">
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
+        </label>
+      </div>
+      <section class="presentation-parallax">
+        <img src="./img/parallax/mina-background.svg" class="parallax-image" id="parallaxBackground" alt="">
+        <img src="./img/parallax/mina-wall-top.svg" class="parallax-image" id="parallaxTop" alt="">
+        <img src="./img/parallax/mina-wall-left.svg" class="parallax-image" id="parallaxLeft" alt="">
+        <img src="./img/parallax/mina-wall-right.svg" class="parallax-image" id="mineRight" alt="">
+        <img src="./img/parallax/mina-floor.svg" class="parallax-image" id="mineFloor" alt="">
+        <img src="./img/parallax/mina-tren.svg" class="parallax-image" id="mineTren" alt="">
+      </section>
+      <div class="presentation-texts">
+        <h2 class="presentation-name">Esteban Villamizar</h2>
+        <h1 class="presentation-title">WELCOME TO MY PORTFOLIO</h1>
+      </div>
+      <div class="texts-social">
+        <a href="https://www.linkedin.com/in/esteban-villamizar/" target="_blank" class="fa-brands fa-linkedin social-icon"></a>
+        <a href="https://www.instagram.com/estebandev_/" target="_blank" class="fa-brands fa-instagram social-icon"></a>
+        <a href="https://github.com/EstebanV23" target="_blank" class="fa-brands fa-github social-icon"></a>
+        <a href="https://twitter.com/estebandev_23" target="_blank" class="fa-brands fa-twitter social-icon"></a>
+      </div>
+    </header>
+    <input type="checkbox" id="button-nav">
+    <nav class="screen-nav">
+      <div class="gradient-presentation"></div>
+      <ul class="nav" data-aos="fade-down">
+        <img src="./img/Logo Esteban Villamizar.svg" class="nav-logo" alt="">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#aboutMe">About Me</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </ul>
+    </nav>
+    <label for="button-nav" class="button-nav-responsive"><i class="fa-solid fa-arrow-right"></i></label>
+    <main class="screen-content">
+      <div class="gradient-presentation"></div>
+      <div class="content-section" id="aboutMe">
+        <img src="./public/img/javascript.svg" alt="" data-aos="fade-down" data-aos-delay="100">
+        <img src="./public/img/java-coffee-cup-logo.svg" alt="" data-aos="fade-down" data-aos-delay="200">
+        <img src="./public/img/node-js.svg" alt="" data-aos="fade-down" data-aos-delay="300">
+        <img src="./public/img/github.svg" alt="" data-aos="fade-down" data-aos-delay="400">
+        <h2 class="section-title" data-aos="zoom-out" data-aos-delay="300">ABOUT ME</h2>
+        <p class="section-text" id="textSection"></p>
+        <a class="section-donwload" data-aos="fade-in" data-aos-delay="1450">Download CV</a>
+      </div>
+      <div class="content-section" id="skills">
+        <h2 class="section-title" data-aos="zoom-out" data-aos-delay="300">SKILLS</h2>
+        <section class="container-skills">
+          <div class="group-skills">
+            <h2 class="skills-title" data-aos="zoom-up" data-aos-offset="-20" data-aos-delay="100">Front-end</h2>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="100" data-aos="fade-up">
+              <img src="./public/img/html-5.svg" class="skills-img" alt="">
+              <h3>HTML 5</h3>
+            </div>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="200" data-aos="fade-up">
+              <img src="./public/img/css3.svg" class="skills-img" alt="">
+              <h3>CSS 3</h3>
+            </div>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="300" data-aos="fade-up">
+              <img src="./public/img/javascript.svg" class="skills-img" alt="">
+              <h3>JAVASCRIPT</h3>
+            </div>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="400" data-aos="fade-up">
+              <img src="./public/img/react.svg" class="skills-img" alt="">
+              <h3>REACT JS</h3>
+            </div>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="500" data-aos="fade-up">
+              <img src="./public/img/bootstrap.svg" class="skills-img" alt="">
+              <h3>BOOTSTRAP</h3>
+            </div>
+          </div>
+          <div class="group-skills">
+            <h2 class="skills-title" data-aos="zoom-up" data-aos-offset="-20" data-aos-delay="100">Back-end</h2>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="100" data-aos="fade-up">
+              <img src="./public/img/node-js.svg" class="skills-img" alt="">
+              <h3>NODE JS</h3>
+            </div>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="200" data-aos="fade-up">
+              <img src="./public/img/java-coffee-cup-logo.svg" class="skills-img" alt="">
+              <h3>JAVA</h3>
+            </div>
+          </div>
+          <div class="group-skills">
+            <h2 class="skills-title" data-aos="zoom-up" data-aos-offset="-20" data-aos-delay="100">Methods</h2>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="100" data-aos="fade-up">
+              <img src="./public/img/scrum.svg" class="skills-img" alt="">
+              <h3>SCRUM</h3>
+            </div>
+          </div>
+          <div class="group-skills">
+            <h2 class="skills-title" data-aos="zoom-up" data-aos-offset="-20" data-aos-delay="100">databases</h2>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="100" data-aos="fade-up">
+              <img src="./public/img/mysql-logo.svg" class="skills-img" alt="">
+              <h3>MYSQL</h3>
+            </div>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="200" data-aos="fade-up">
+              <img src="./public/img/mongo.svg" class="skills-img" alt="">
+              <h3>MONGO DB</h3>
+            </div>
+            <div class="skills-group-image" data-aos-offset="-20" data-aos-delay="300" data-aos="fade-up">
+              <img src="./public/img/maria-db.svg" class="skills-img" alt="">
+              <h3>MARIA DB</h3>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="content-section" id="projects">
+        <h2 class="section-title" data-aos="zoom-out" data-aos-delay="300">PROJECTS</h2>
+        <section class="projects-grid">
+          <div class="grid-content-image">
+            <img src="./public/img/projects/00-front.png" data-aos="flip-up" data-aos-offset="10" alt="">
+            <a href="https://estebanv23.github.io/00-front-coex/src/" target="_blank" class="content-image-text">QUIZ</a>
+          </div>
+          <div class="grid-content-image">
+            <img src="./public/img/projects/01-calculator.png" data-aos="flip-down" data-aos-offset="20" alt="">
+            <a href="https://estebanv23.github.io/01-calculator/src/" target="_blank" class="content-image-text">CALCULATOR</a>
+          </div>
+          <div class="grid-content-image">
+            <img src="./public/img/projects/02-dashboard.png" data-aos="flip-up" data-aos-offset="30" alt="">
+            <a href="https://estebanv23.github.io/02-dashboard/" target="_blank" class="content-image-text">DASHBOARD</a>
+          </div>
+          <div class="grid-content-image">
+            <img src="./public/img/projects/03-pokeapi.png" data-aos="flip-down" data-aos-offset="40" alt="">
+            <a href="https://estebanv23.github.io/03-pokeApi/" target="_blank" class="content-image-text">POKEAPI</a>
+          </div>
+          <div class="grid-content-image">
+            <img src="./public/img/projects/04-weather.png" data-aos="flip-up" data-aos-offset="50" alt="">
+            <a href="https://estebanv23.github.io/04-weather/" target="_blank" class="content-image-text">WEATHER</a>
+          </div>
+          <div class="grid-content-image">
+            <img src="./public/img/projects/05-triki.png" data-aos="flip-down" data-aos-offset="60" alt="">
+            <a href="https://estebanv23.github.io/05-triki/" target="_blank" class="content-image-text">TRIKI</a>
+          </div>
+        </section>
+      </div>
+      <div class="content-section" id="contact">
+        <h2 class="section-title" data-aos="zoom-out" data-aos-delay="300">CONTACT</h2>
+        <form action=""></form>
+      </div>
+    </main>
     <script type="module" src="/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
   </body>
 </html>
