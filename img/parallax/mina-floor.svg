@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" enable-background="new 0 0 740 222" viewBox="0 0 740 222">
+  <switch>
+    <g>
+      <defs>
+        <path id="a" d="M0 0h740v222H0z"/>
+      </defs>
+      <clipPath id="c">
+        <use xlink:href="#a" overflow="visible"/>
+      </clipPath>
+      <linearGradient id="b" x1="377.5" x2="377.5" y1="233" y2="149" gradientUnits="userSpaceOnUse">
+        <stop offset=".2737" style="stop-color:#242424"/>
+        <stop offset="1" style="stop-color:#7c2d78"/>
+      </linearGradient>
+      <path fill="url(#b)" fill-rule="evenodd" d="M745 233H-4l-5-70 773-14z" clip-path="url(#c)" clip-rule="evenodd"/>
+      <defs>
+        <filter id="d" width="755" height="228" x="-8" y="-2" filterUnits="userSpaceOnUse">
+          <feFlood result="back" style="flood-color:white;flood-opacity:1"/>
+          <feBlend in="SourceGraphic" in2="back"/>
+        </filter>
+      </defs>
+      <mask id="f" width="755" height="228" x="-8" y="-2" maskUnits="userSpaceOnUse">
+        <g filter="url(#d)">
+          <radialGradient id="e" cx="534.0636" cy="137.1915" r="251.5331" gradientUnits="userSpaceOnUse">
+            <stop offset="0" style="stop-color:#000"/>
+            <stop offset=".0899" style="stop-color:#070707"/>
+            <stop offset=".2163" style="stop-color:#191919"/>
+            <stop offset=".3637" style="stop-color:#373737"/>
+            <stop offset=".4485" style="stop-color:#4b4b4b"/>
+            <stop offset=".5265" style="stop-color:#5e5e5e"/>
+            <stop offset=".6844" style="stop-color:#8f8f8f"/>
+            <stop offset=".9057" style="stop-color:#dcdcdc"/>
+            <stop offset="1" style="stop-color:#fff"/>
+          </radialGradient>
+          <path fill="url(#e)" fill-rule="evenodd" d="M-8-2h755v228H-8z" clip-path="url(#c)" clip-rule="evenodd" mask="url(#f)"/>
+        </g>
+      </mask>
+    </g>
+  </switch>
+</svg>
