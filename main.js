@@ -2,14 +2,11 @@ import modifyNav from './modifyDom'
 import './style.css'
 
 const $ = classId => document.querySelector(classId)
-const allSelect = className => document.querySelectorAll(className)
 
 const background = $('#parallaxBackground')
-const top = $('#parallaxTop')
 const left = $('#parallaxLeft')
 const right = $('#mineRight')
 const gold = $('#mineGold')
-const presentation = $('.screen-presentation')
 const texts = $('.presentation-texts')
 const textSection = $('#textSection')
 
