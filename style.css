@@ -18,16 +18,16 @@
   --CascadiaCode: "Cascadia Code";
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--Signika);
   font-weight: 300;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 .black-back{background-color: var(--Black1);} 
@@ -76,7 +76,7 @@ html{
 }
 
 .presentation-texts{
-  transform: translateX(90%);
+  transform: translateX(0);
   height: 100%;
   width: 100%;
   display: flex;
@@ -110,7 +110,7 @@ html{
 }
 
 .presentation-links{
-  z-index: 12;
+  z-index: 20;
   display: flex;
   text-align: center;
   align-items: center;
@@ -238,7 +238,7 @@ html{
   position: relative;
   position: absolute;
   top: 30%;
-  z-index: 9;
+  z-index: 21;
   width: 100%;
   justify-content: center;
   transition: all 0.3s ease-in-out;
@@ -489,7 +489,7 @@ html{
 
 .projects-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
   gap: 20px;
 }
 
@@ -538,8 +538,6 @@ html{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 10px;
-  padding: 20px;
 }
 
 .content-image-text{
@@ -547,7 +545,7 @@ html{
   align-items: center;
   justify-content: center;
   height: 100%;
-  border-radius: 0.9rem;
+  border-radius: 0 0.9rem 0.9rem 0;
   background-color: rgba(0, 255, 221, 0.61);
   color: var(--Black2);
   text-decoration: none;
@@ -558,6 +556,10 @@ html{
   padding: 20px;
   transform: all 0.3s ease-in-out;
   animation: hiddenText forwards ease-in-out 0.3s;
+}
+
+.content-image-text:nth-child(1){
+  border-radius: 0.9rem 0 0 0.9rem;
 }
 
 .content-image-text:first-child{
@@ -586,47 +588,6 @@ html{
   }
 }
 
-.group-input{
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  color: var(--color4);
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: var(--CascadiaCode);
-  display: block;
-}
-
-.input-text{
-  padding: 0;
-  font-family: var(--CascadiaCode);
-  font-weight: 600;
-  border: none;
-  background: var(--Black2);
-  font-size: 1.5rem;
-  height: 100%;
-  caret-color: transparent;
-  display: flex;
-  align-items: center;
-  color: #9ac7a7;
-  cursor: text;
-}
-
-.input-text::after{
-  content: "";
-  display: inline-block;
-  height: 1.5rem;
-  width: 3px;
-  margin-left: 4px;
-  background-color: yellow;
-  display: none;
-  animation: blink 1s ease-in-out infinite;
-}
-
-.input-text:focus::after{
-  display: inline-block;
-}
-
 
 @keyframes blink {
   0%{
@@ -642,8 +603,83 @@ html{
   }
 }
 
-.input-text:focus{
-  outline: none;
+.section-image-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  gap: 2rem;
+}
+
+.image-container-social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-icon{
+  color: white;
+  text-decoration: none;
+  font-size: 2.7rem;
+  transition: all 0.15s ease-in-out;
+  animation: poped 0.15s ease-in-out forwards;
+}
+
+.profile-icon:hover{
+  animation: pop 0.15s ease-in-out forwards;
+}
+
+@keyframes pop {
+  0%{
+    transform: scale(1);
+    color: white;
+  }
+  100%{
+    transform: scale(1.3);
+    color: yellow;
+  }
+}
+
+@keyframes poped {
+  0%{
+    transform: scale(1.3);
+    color: yellow;
+  }
+  100%{
+    transform: scale(1);
+    color: white;
+  }
+}
+
+.section-profile{
+  width: 50%;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  box-shadow: 0px 10px yellow;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0px 0px;
+}
+
+.name-section{
+  font-size: 5vh;
+  font-family: var(--CascadiaCode);
+  font-weight: 500;
+  color: yellow;
+  text-align: center;
+}
+
+.name-section::after{
+  content: "";
+  height: 5vh;
+  width: 3px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  background: var(--LogoColor);
+  animation: blink 1s ease-in-out infinite;
 }
 
 @media (max-width: 1024px) {
@@ -761,6 +797,18 @@ html{
   
   .section-text::after{
     height: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .section-title{
+    font-size: 8vh;
+  }
+  .section-text{
+    font-size: 1.4rem;
+  }
+  .content-image-text{
+    font-size: 4vh;
   }
 }
 
