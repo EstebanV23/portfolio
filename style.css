@@ -30,6 +30,35 @@ html{
   scroll-behavior: smooth;
 }
 
+.portfolio-content {
+  font-family: var(--Tajawal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  text-decoration: none;
+  z-index: 30;
+  background-color: rgb(238, 204, 55);
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-content a {
+  color: #333;
+  font-family: var(--Tajawal);
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .black-back{background-color: var(--Black1);} 
 .black-back2{background-color: var(--Black2);}
 
